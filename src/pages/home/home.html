@@ -1,14 +1,27 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+
+
+<menu-bar></menu-bar>
+
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    
+
+  <h1>Open Campaigns</h1>
+
+  <ion-grid>
+    <ion-row>
+    <ion-col>
+        <campaign-card *ngFor="let address of campaignAddress" [address]="address"></campaign-card>
+    </ion-col>
+    <ion-col>
+        <button color="primary" ion-button (click)="navigateToCreateCampaign()">
+            <ion-icon name="add-circle"> </ion-icon>
+             Create Campaign</button>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+    
+  
+
+    
 </ion-content>
